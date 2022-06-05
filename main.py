@@ -26,13 +26,7 @@ def joke_form():
 
 @app.route("/jokes/", methods=["GET", "POST"])
 def jokes():
-    num: int
-    if request.method == "POST":
-        num = request.form.get("num", type=int)
-    else:
-        num = request.args.get("num", type=int)
-
-    num = 1 if num is None else num
+    num = request.args.get("num", type=int, default=1)
     return jsonify(random.sample(jokes, num))
 
 

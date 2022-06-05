@@ -3,9 +3,9 @@
 <header>
     <h1>Joke Generator!</h1>
 </header>
-<form action="/jokes" method="post">
+<form action="/jokes" method="get">
     <p>How many jokes would you like to check out?</p>
-    <input type="number" id="num" name="num" min="1" max="10" value="1">
+    <input type="number" id="num" name="num" min="1" max="10" value="1" required>
     <input type="submit" value="Get Jokes"/>
 </form>
 </body>
